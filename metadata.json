@@ -1,0 +1,6 @@
+{
+  "name": "GrowthPilot AI",
+  "description": "Autonomous AI Sales & Customer Growth Agent with multi-agent workflows, lead scoring, campaign generator, and sales intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
