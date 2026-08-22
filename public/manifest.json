@@ -1,0 +1,53 @@
+{
+  "name": "GrowthPilot AI — Autonomous Sales & Growth Agent",
+  "short_name": "GrowthPilot",
+  "description": "Autonomous AI Sales & Customer Growth Platform for modern businesses.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "shortcuts": [
+    {
+      "name": "Executive Dashboard",
+      "short_name": "Dashboard",
+      "description": "View real-time sales pipeline & metrics",
+      "url": "/?tab=dashboard",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Leads Pipeline",
+      "short_name": "Leads",
+      "description": "Evaluate prospect intelligence & scores",
+      "url": "/?tab=leads",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Campaign Generator",
+      "short_name": "Campaigns",
+      "description": "Create instant marketing campaigns",
+      "url": "/?tab=campaigns",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ]
+}

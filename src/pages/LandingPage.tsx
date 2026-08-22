@@ -17,8 +17,10 @@ import {
   Layers,
   Sun,
   Moon,
+  Download,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { usePWA } from '../context/PWAContext';
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -32,6 +34,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   onDemoLogin = onLogin,
 }) => {
   const { theme, toggleTheme } = useTheme();
+  const { openInstallModal, isInstalled } = usePWA();
   const [activeWorkflowStep, setActiveWorkflowStep] = useState(0);
 
   const workflowSteps = [
@@ -88,6 +91,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
+            {!isInstalled && (
+              <button
+                onClick={openInstallModal}
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-semibold transition-all shadow-sm"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Install App</span>
+              </button>
+            )}
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"

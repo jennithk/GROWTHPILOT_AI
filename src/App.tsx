@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { ToastProvider } from './context/ToastContext';
+import { PWAProvider } from './context/PWAContext';
 import {
   LayoutDashboard,
   BrainCircuit,
@@ -29,6 +30,7 @@ import { SettingsPage } from './pages/SettingsPage';
 import { Navbar } from './components/Navbar';
 import { Sidebar } from './components/Sidebar';
 import { LeadModal } from './components/LeadModal';
+import { InstallModal } from './components/InstallModal';
 import { api } from './services/api';
 import { useToast } from './context/ToastContext';
 import { Lead } from './types';
@@ -269,7 +271,10 @@ export default function App() {
     <ThemeProvider>
       <ToastProvider>
         <AuthProvider>
-          <MainRouter />
+          <PWAProvider>
+            <MainRouter />
+            <InstallModal />
+          </PWAProvider>
         </AuthProvider>
       </ToastProvider>
     </ThemeProvider>
